@@ -1,7 +1,7 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+
+def homepage(request):
+    return render(request, 'index.html')
 
 def about_us(request):
-    return HttpResponse("This site built by Alex Daly as a project for learning Django and Docker")
-
-def temporary_homepage(request):
-    return HttpResponse("This is a temporary homepage")
+    return render(request, 'about-us.html')
