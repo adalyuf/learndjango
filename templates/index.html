@@ -3,10 +3,27 @@
         <meta charset="utf-8">
         <title>Welcome to LearnDjango - LearnDjango</title>
         {% load static %}
-        <link rel="stylesheet" href="{% static 'main.css' %}"
+        <link rel="stylesheet" href="{% static 'main.css' %}">
     </head>
     <body>
         <h1>Welcome to Learning Django</h1>
-        <a href="{% url 'about_us' %}">Path to about us</a>
+        <p>
+            <a href="{% url 'about_us' %}">Path to about us</a>
+        </p>
+        <p>
+            <img src="{% static 'elephant.jpg' %}">
+        </p>
+        <p>
+            <button onclick="buttonFunc()">Click to change color</button>
+        </p>
+        <p>
+            <a href="{% url 'result' %}">Click to result</a>
+            <form action="{% url 'result' %}">
+                {% csrf_token %}
+                <input type="text" name="user_input">
+                <input type="submit" value="Click me">
+            </form>
+        </p>
+        <script type="text/javascript" src="{% static 'main.js' %}"></script>
     </body>
 </html>
