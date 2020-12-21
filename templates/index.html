@@ -2,8 +2,11 @@
     <head>
         <meta charset="utf-8">
         <title>Welcome to LearnDjango - LearnDjango</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'main.css' %}"
     </head>
     <body>
         <h1>Welcome to Learning Django</h1>
+        <a href="{% url 'about_us' %}">Path to about us</a>
     </body>
 </html>
